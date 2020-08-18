@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="839.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marble.BlueMarbleController">
+   <children>
+      <DatePicker fx:id="datePicker" layoutX="198.0" layoutY="755.0" onAction="#onDatePicker" />
+      <ImageView fx:id="blueMarbleImage" fitHeight="655.0" fitWidth="991.0" layoutX="27.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+      </ImageView>
+      <Button fx:id="addImage" layoutX="415.0" layoutY="755.0" mnemonicParsing="false" onAction="#onAddImage" text="Add/Update Image" />
+      <CheckBox fx:id="enhancedImage" layoutX="565.0" layoutY="760.0" mnemonicParsing="false" onAction="#onEnhancedImage" text="Enhanced" />
+      <CheckBox fx:id="blackAndWhite" layoutX="687.0" layoutY="760.0" mnemonicParsing="false" onAction="#onBlackAndWhite" text="Black and White" />
+      <TextArea fx:id="messageBox" layoutX="198.0" layoutY="790.0" prefHeight="42.0" prefWidth="601.0" />
+   </children>
 </AnchorPane>

@@ -1,3 +1,4 @@
+package marble;
 
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
 
 public class BlueMarble {
-	
+
 	private String API_KEY = "7u1nv3v73ROS0u2F65J7w14pnGpjzwCv6cruBzes";
 	private String dateAsString;
 	private String quality = "natural";
@@ -22,17 +23,17 @@ public class BlueMarble {
 		blueMarble.setDate(LocalDate.now().minusDays(1).toString());
 		return blueMarble.getImage();
 	}
-	
+
 	public void setDate(String date) {
 		this.dateAsString = date;
 	}
-	
+
 	public InputStream getImage() {
 		try {
 			getMetaData();
 
 			URL url = new URL("https://api.nasa.gov/EPIC/archive/" + quality + "/" + dateAsString.replace('-', '/')
-					+ "/png/" + this.nasaImageName + ".png?api_key=" + API_KEY);
+			+ "/png/" + this.nasaImageName + ".png?api_key=" + API_KEY);
 			return url.openStream();
 
 		} catch (Exception e) {

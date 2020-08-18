@@ -1,4 +1,5 @@
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,6 +7,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import org.junit.Test;
+
+import marble.BlueMarble;
 
 public class BlueMarbleTest {
 
